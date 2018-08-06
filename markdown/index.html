@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<base href = ".">
+	<title>Markdown Preview</title>
+	
+	<link rel="stylesheet" href="markdown.css">
+	<style>
+	body {
+		font: 12px 'Helvetica Neue', Helvetica, Arial, freesans, clean, sans-serif;
+		color: #333;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	a {
+		color: #666;
+	}
+	form {
+		padding: 20px; 
+		text-align: center;
+	}
+	strong {
+		color: #333;
+		background-color: #FAFFA6;
+		padding: 0.1em;
+	}
+	#footer {
+		margin: 20px 0;
+		font-size: 10px;
+		color: #666;
+	}
+	</style>
+</head>
+<body>
+	<form id="previewform" action="">
+		<h1>Markdown Preview</h1>
+		<p>Enter URL of the file to preview: <input type="url" id="file" value="" placeholder="e.g. https://github.com/user/repo/blob/master/readme.md" size="60" autofocus> <input type="submit" value="&raquo;"></p>
+		<p>or prepend to the URL: <strong>http://previewhub.github.io/markdown/?</strong>https://github.com/MavenHub/maven-reference-en/blob/master/README.md</p>
+	</form>
+	
+	<div id="content"></div>
+
+	<script src="markdown.js"></script>
+	<script src="htmlpreview.js"></script>
+	<script>HTMLPreview.init();</script>
+	<script>document.getElementsByTagName('base')[0].href = HTMLPreview.raw();</script>
+</body>
+</html>
